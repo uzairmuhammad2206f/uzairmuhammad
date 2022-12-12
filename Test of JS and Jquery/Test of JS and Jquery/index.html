@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test of JS and Jquery</title>
+    <link rel="stylesheet" href="Css/bootStrap.css">
+    <script src="Js/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="">
+        <input type="text" id="txt_evenOdd" class="px-2 py-1 rounded-3 mt-5" placeholder="even or odd">
+        <button type="button" class="btn btn-success" id="btn_evenOdd">EvenOdd</button>
+        
+        <div class="tableMaker mb-5">
+            Number:
+        </div>
+    </div>
+    <input type="text" class="px-3 py-2 mt-5 rounded-3" placeholder="Table"  id="txt_table">
+    <button id="btn_click" type="button" class="btn btn-dark px-3 py-2">Table</button>
+</div>
+
+    <script>
+        $(document).ready(function(){
+$('#btn_click').click(function(){
+
+
+        var tableNum = $('#txt_table').val();
+       for(var i = 1; i < 11; i++ ){
+      
+               console.log( tableNum , "X" , i , "=" , tableNum*i )   
+
+
+            }
+        })
+        $('#btn_evenOdd').click(function(){
+
+        
+        var takenValue = $('#txt_evenOdd').val();
+        for(var j = 0; j <= 10; j++){
+            var data = takenValue % 2
+        }
+        if(data === 0){
+$('.tableMaker').html("Number:even")
+}
+else{
+    $('.tableMaker').html("Number:odd")
+        }
+        
+    })
+        })
+    </script>
+</body>
+</html>
